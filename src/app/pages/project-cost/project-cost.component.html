@@ -1,0 +1,119 @@
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <h1 class="title">项目成本管理</h1>
+  </div>
+  <!-- End Page Header -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+  <!-- START CONTAINER -->
+  <div class="container-padding">
+
+    <!--<div class="row">-->
+      <!--<div class="col-md-12 padding-b-20">-->
+        <!--<h4 class="font-title">-->
+          <!--<a href="javascript:;"  data-type="text" data-title="项目名" (click)="creater()"  >新建项目</a>-->
+        <!--</h4>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!-- Start Row -->
+    <div class="row" *ngFor="let newItem of projectList;let i = index">
+
+      <div   *ngIf="i !=mqId" class="col-md-12 padding-b-20">
+        <!--<a href="#" id="projectName" data-type="text" data-title="项目名" ngModel>{{projectName}}</a>-->
+        <h4 class="font-title">
+          <!--{{newItem.xmName}}-->
+          <form #myForm="ngForm">
+            <input style="border: none;background-color: #f5f5f5;box-shadow: none;font-size:18px;font-weight: 400;color:#399bff " type='text' name='projectName' [(ngModel)]="newItem.xmName"
+                   (click)="yincang(i)">
+          </form>
+        </h4>
+      </div>
+
+      <div  *ngIf="i === mqId" class="col-md-12 padding-b-20">
+        <h4 class="font-title">
+          <form class="form-inline editableform" style="">
+            <div class="control-group form-group">
+              <div>
+                <div class="editable-input" style="position: relative;">
+                  <input type="text" class="form-control input-sm" name='projectName' [(ngModel)]="newItem.xmName" style="padding-right: 24px;" >
+                  <span class="editable-clear-x" (click)="clear(i)"></span>
+                </div>
+                <div class="editable-buttons">
+                  <!--type="submit"-->
+                  <button  class="btn btn-primary btn-sm editable-submit" (click)="fahttp(newItem.xmName,i)">
+                    <i class="glyphicon glyphicon-ok"></i>
+                  </button>
+                  <button type="button" class="btn btn-default btn-sm editable-cancel" (click)="rollback(i)">
+                    <i class="glyphicon glyphicon-remove" ></i>
+                  </button>
+                </div>
+              </div>
+              <div class="editable-error-block help-block" style="display: none;"></div>
+            </div>
+          </form>
+        </h4>
+      </div>
+
+      <!-- Start Panel -->
+      <div class="col-md-3 col-lg-2" *ngFor="let newPlan of newItem.plan">
+        <a href="javascript:;" [routerLink]="['/allbox/projectCostDetail']">
+          <div class="panel panel-success">
+            <div class="panel-title panel-heading" style="font-size:16px;padding-left: 15px;padding-top: 15px">
+              {{newPlan.time}}
+            </div>
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+              <ul>
+                <li>成员数{{newPlan.person}}</li>
+                <li>合计作业工时(人月)</li>
+                <li>计划成本</li>
+                <li>实际成本</li>
+                <li>项目状态</li>
+                <li>累计成本</li>
+              </ul>
+            </div>
+            <div class="panel-footer">填报完毕</div>
+          </div>
+        </a>
+      </div>
+      <!-- End Panel -->
+      <!--新建计划 新建计划 新建计划-->
+      <!-- Start Panel -->
+      <div *ngIf="i != 0" class="col-md-3 col-lg-2">
+        <a href="javascript:;" [routerLink]="['/allbox/projectCostDetail']">
+          <div class="panel panel-info">
+            <div class="panel-title panel-heading" style="font-size:16px;padding-left: 15px;padding-top: 15px">新建计划</div>
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="panel-footer">&nbsp;</div>
+          </div>
+        </a>
+      </div>
+      <!-- End Panel -->
+
+    </div>
+    <!-- End Row -->
+
+  </div>
+
+
+  <!-- Start Footer -->
+  <div class="row footer">
+    <div class="col-md-6 text-left">
+      Copyright © 2018 <a href="#/" target="_blank">xiaoji</a> All rights reserved.
+    </div>
+    <div class="col-md-6 text-right">
+      Design and Developed by <a href="#/" target="_blank">xiaoji</a>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+
+</div>
+<!-- End Content -->

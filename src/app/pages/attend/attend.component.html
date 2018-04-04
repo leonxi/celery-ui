@@ -1,0 +1,97 @@
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <h1 class="title">考勤管理</h1>
+
+  </div>
+  <!-- End Page Header -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+  <!-- START CONTAINER -->
+  <div class="container-padding">
+
+
+    <!-- Start Row -->
+    <div class="row">
+
+      <div class="col-md-12 padding-b-20">
+        <h4 class="font-title">{{year}}年</h4>
+      </div>
+
+      <!-- Start Panel -->
+      <div class="col-md-3 col-lg-2" *ngFor="let attend of attendList">
+        <div class="panel panel-success">
+
+          <div class="panel-title panel-heading" style="font-size:16px;padding-left: 15px;padding-top: 15px">{{year}}年{{attend.month}}月</div>
+          <div class="panel-heading"></div>
+          <div class="panel-body">
+
+            <ul>
+              <li>职工数--{{attend.employeeNumber}}</li>
+              <li>工作天数----</li>
+              <li>计划成本----</li>
+              <li>实际成本----</li>
+              <li>项目状态----</li>
+              <li>累计成本----</li>
+            </ul>
+          </div>
+
+          <div class="panel-footer">填报完毕</div>
+
+        </div>
+      </div>
+      <!-- End Panel -->
+      <!-- Start Panel -->
+      <div class="col-md-3 col-lg-2">
+        <a href="javascript:;" [routerLink]="['/allbox/attendDetail']">
+          <div class="panel panel-info">
+
+            <div class="panel-title panel-heading" style="font-size:16px;padding-left: 15px;padding-top: 15px">导入新数据</div>
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+              <i class="fa fa-plus"></i>
+            </div>
+
+            <div class="panel-footer">&nbsp;</div>
+
+          </div>
+        </a>
+      </div>
+      <!-- End Panel -->
+    </div>
+    <!-- End Row -->
+
+    <!-- Start Row -->
+    <div class="row">
+      
+    </div>
+    <!-- End Row -->
+
+    <div class="row">
+      <div class="col-md-12 padding-b-20">
+        <h4 class="font-title">历年记录</h4>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- END CONTAINER -->
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+  <!-- Start Footer -->
+  <div class="row footer">
+    <div class="col-md-6 text-left">
+      Copyright © 2015 <a href="#/" target="_blank">xiaoji</a> All rights reserved.
+    </div>
+    <div class="col-md-6 text-right">
+      Design and Developed by <a href="#/" target="_blank">xiaoji</a>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+
+</div>
+<!-- End Content -->

@@ -1,0 +1,1093 @@
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <h1 class="title">项目成本核算表</h1>
+
+    <!-- Start Page Header Right Div -->
+    <div class="right">
+      <div class="btn-group" role="group" aria-label="...">
+        <a href="index.html" class="btn btn-light">提交</a>
+      </div>
+    </div>
+    <!-- End Page Header Right Div -->
+
+  </div>
+  <!-- End Page Header -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+  <!-- START CONTAINER -->
+  <div class="container-default">
+    <div class="panel panel-transparent">
+
+      <div class="panel-body">
+
+        <div role="tabpanel">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs font-title-tab tabcolor6-bg" role="tablist">
+            <li role="presentation" class="active"><a href="#home9" aria-controls="home9" role="tab" data-toggle="tab" aria-expanded="true" class="">计划</a></li>
+            <li role="presentation" class=""><a href="#profile9" aria-controls="profile9" role="tab" data-toggle="tab" class="" aria-expanded="false">实际</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane clearfix active" id="home9">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>ID</td>
+                          <td>姓名</td>
+                          <td>等级</td>
+                          <td>人工成本</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let employee of emplist">
+                          <td># <b>{{employee.id}}</b></td>
+                          <td>{{employee.name}}</td>
+                          <td>{{employee.level}}</td>
+                          <td>{{employee.cost}}</td>
+                        </tr>
+                        <tr>
+                          <td># <b>--</b></td>
+                          <td>
+                            <input type="text" placeholder="添加项目成员" name="employee" ngModel>
+                          </td>
+                          <td>
+                            <select>
+                              <option *ngFor="let level of levelList">{{level}}</option>
+                            </select>
+                          </td>
+                          <td>--</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td><abbr title="周一至周五工作日" class="initialism">作业人月</abbr></td>
+                          <td><abbr title="周六，周日" class="initialism">加班人月</abbr></td>
+                          <td><abbr title="国定假" class="initialism">加班人月</abbr></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let math of mathlist">
+                          <td>{{math.month1}}</td>
+                          <td>{{math.month2}}</td>
+                          <td>{{math.month3}}</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td><abbr title="周一至周五工作日" class="initialism">人工成本</abbr></td>
+                          <td><abbr title="周六，周日" class="initialism">加班费</abbr></td>
+                          <td><abbr title="国定假" class="initialism">加班费</abbr></td>
+                          <td>经费</td>
+                          <td>其他</td>
+                          <td>外协成本</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let math of mathlist">
+                          <td>{{math.cost1}}</td>
+                          <td>{{math.cost2}}</td>
+                          <td>{{math.cost3}}</td>
+                          <td>{{math.cost4}}</td>
+                          <td>{{math.cost5}}</td>
+                          <td>{{math.cost6}}</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <table class="table table-bordered table-striped">
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <table class="table table-bordered table-striped">
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      作业工时（周一至周五工作日）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      加班工时（周六，周日）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      加班工时（国定假）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      加班工时（周一至周五工作日）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="button" class="btn btn-default btn-block">提交</button>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile9">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>ID</td>
+                          <td>姓名</td>
+                          <td>等级</td>
+                          <td>人工成本</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9651</b></td>
+                          <td>Doe Bike</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                        </tr>
+                        <tr>
+                          <td># <b>6962</b></td>
+                          <td>Zets Baseball Bat</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td><abbr title="周一至周五工作日" class="initialism">作业人月</abbr></td>
+                          <td><abbr title="周六，周日" class="initialism">加班人月</abbr></td>
+                          <td><abbr title="国定假" class="initialism">加班人月</abbr></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode </td>
+                          <td>John Doe</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New </td>
+                          <td>Jane Doe</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9651</b></td>
+                          <td>Doe Bike</td>
+                          <td>Jonathan</td>
+                        </tr>
+                        <tr>
+                          <td># <b>6962</b></td>
+                          <td>Zets Baseball</td>
+                          <td>Jonathan</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td><abbr title="周一至周五工作日" class="initialism">人工成本</abbr></td>
+                          <td><abbr title="周六，周日" class="initialism">加班费</abbr></td>
+                          <td><abbr title="国定假" class="initialism">加班费</abbr></td>
+                          <td>经费</td>
+                          <td>其他</td>
+                          <td>外协成本</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode</td>
+                          <td>John</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further</td>
+                          <td>Credit</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further</td>
+                          <td>Paypal</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further</td>
+                          <td>Credit</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9651</b></td>
+                          <td>Doe Bike</td>
+                          <td>Jonathan</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further</td>
+                          <td>Credit</td>
+                        </tr>
+                        <tr>
+                          <td># <b>6962</b></td>
+                          <td>Zets</td>
+                          <td>Jonathan</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further</td>
+                          <td>Credit</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <table class="table table-bordered table-striped">
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <table class="table table-bordered table-striped">
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      作业工时（周一至周五工作日）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      加班工时（周六，周日）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      加班工时（国定假）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+
+                    <div class="panel-title">
+                      加班工时（周一至周五工作日）
+                    </div>
+
+                    <div class="panel-body">
+
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>职位</td>
+                          <td>姓名</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>5月</td>
+                          <td>6月</td>
+                          <td>7月</td>
+                          <td>8月</td>
+                          <td>9月</td>
+                          <td>10月</td>
+                          <td>11月</td>
+                          <td>12月</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>Kode Gaming Laptop</td>
+                          <td>John Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>1963</b></td>
+                          <td>New Season Jacket</td>
+                          <td>Jane Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Paypal</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        <tr>
+                          <td># <b>9652</b></td>
+                          <td>IO Mouse</td>
+                          <td>Jonathan Doe</td>
+                          <td>12/10/2015</td>
+                          <td>As we got further and further away, it [the Earth] diminished in size.</td>
+                          <td>Credit Card</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                          <td>1月</td>
+                          <td>2月</td>
+                          <td>3月</td>
+                          <td>4月</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="button" class="btn btn-default btn-block">提交</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- END CONTAINER -->
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+  <!-- Start Footer -->
+  <div class="row footer">
+    <div class="col-md-6 text-left">
+      Copyright © 2015 <a href="#/" target="_blank">xiaoji</a> All rights reserved.
+    </div>
+    <div class="col-md-6 text-right">
+      Design and Developed by <a href="#/" target="_blank">xiaoji</a>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+
+</div>
+<!-- End Content -->
